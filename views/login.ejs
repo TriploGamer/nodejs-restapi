@@ -1,45 +1,30 @@
-<div id="wrapper">
-<div class="vertical-align-wrap">
-<div class="vertical-align-middle auth-main">
-<div class="auth-box">
-<div class="card">
-<div class="header">
-<center
-
-<h5 class="lead">[ ENTRAR NA SUA CONTA ]</h5>
-</center>
-</div>
-
-<%- include('layouts/msg')  %> 
-<%- include('layouts/errors')  %> 
-
-<div class="body">
-<form class="form-auth-small" method="POST" action="/users/login">
-
-<div class="form-group">
-<label for="signin-email" class="control-label sr-only">Email</label>
-<input style="font-family:Arial, FontAwesome" name="username" type="text" class="form-control"" placeholder="[ User ]" required>
-</div>
-
-<div class="form-group">
-<label for="signin-password" class="control-label sr-only">Password</label>
-<input style="font-family:Arial, FontAwesome" name="password" type="password" class="form-control" placeholder="[ Senha ]" required>
-</div>
-
-<div>
-<%- recaptcha %>
-</div>
-
-<button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
-
-</form>
-
-<div class="bottom">
-<span>Não tem uma Conta? <a href="/users/register">Registrar</a></span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<section id="pricing">
+    <div class="row pricing-content">
+        <center>
+            <%- include('layouts/msg')  %> 
+            <%- include('layouts/errors')  %> 
+        </center>
+    </div>
+    <div class="row pricing-content">
+        <center>
+            <form method="POST" action="/users/login">
+                <h2>LOGIN FORM</h2>
+                <div>
+                    <input style="font-family:Arial, FontAwesome" name="username" type="text" class="form-control"" placeholder="&#xf007;   Username" required>
+                </div>
+                <div>
+                    <input style="font-family:Arial, FontAwesome" name="password" type="password" class="form-control" placeholder="&#xf13e;   Password" required>
+                </div>
+                <div>
+                    <%- recaptcha %>
+                </div>
+                <p> </p>
+                <button type="submit" class="button button-primary">Login</button>
+            </form>	
+            <div>
+                <p>Create an Account!</p>
+                <a class="button button-primary" href="/users/register">Register</a>
+            </div>
+        </center>      
+    </div>
+</section>
