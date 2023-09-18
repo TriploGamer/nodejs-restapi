@@ -1,20 +1,52 @@
-<header id="header" class="row">   
-  <div class="header-logo">
-      <a href="/">Zekais-Api</a>
-  </div>
-  <nav id="header-nav-wrap">
-      <ul class="header-main-nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/price">Price</a></li>
-          <li><a href="/premium">Premium</a></li>
-          <% if (user) { %>
-            <li><a href="/users/logout">Logout</a></li>
-          <% } else { %>
-            <li><a href="/users/register">Register</a></li>
-            <li><a href="/users/login">Login</a></li>
-          <% } %> 
-      </ul>
-      <a href="/docs" class="button button-primary cta">Docs</a>
-  </nav>
-  <a class="header-menu-toggle" href="#"><span>Menu</span></a>    	
-</header>
+<section class="smart-scroll">
+<div class="container-fluid">
+<nav class="navbar navbar-expand-md navbar-dark">
+<a class="navbar-brand heading-black" href="/">JG-BOTS API'S</a>
+<button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+<span data-feather="grid"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav ml-auto">
+
+<li class="nav-item"><a class="nav-link page-scroll d-flex flex-row align-items-center" href="/price">
+<em class="mr-2"></em>
+Valores
+</a>
+
+<li class="nav-item"><a class="nav-link page-scroll d-flex flex-row align-items-center" href="/premium">
+<em class="mr-2"></em>
+Premium
+</a>
+
+<% if (user) { %>
+
+<li class="nav-item"><a class="nav-link page-scroll d-flex flex-row align-items-center" href="/users/logout">
+<em class="mr-2"></em>
+Sair
+</a>
+</li>
+
+<% } else { %>
+
+<li class="nav-item"><a class="nav-link page-scroll d-flex flex-row align-items-center" href="/users/register">
+<em class="mr-2"></em>
+Registrar
+</a>
+
+<li class="nav-item"><a class="nav-link page-scroll d-flex flex-row align-items-center" href="/users/login">
+<em class="mr-2"></em>
+Entrar
+</a>
+
+<% } %>
+
+<li class="nav-item"><a class="nav-link page-scroll d-flex flex-row align-items-center" href="/docs">
+<em class="mr-2"></em>
+Documentos
+</a>
+
+</ul>
+</div>
+</nav>
+</div>
+</section>
