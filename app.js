@@ -27,7 +27,7 @@ app.use(compression())
 const limiter = rateLimit({
   windowMs: 1 * 60 * 1000, 
   max: 2000, 
-  message: 'Oops too many requests'
+  message: 'Oops precisa de mais requisições!'
 });
 app.use(limiter);
 
@@ -104,5 +104,5 @@ app.use(function (req, res, next) {
 app.set('json spaces', 4);
 
 app.listen(PORT, () => {
-  console.log(`App listening at http://localhost:${PORT}`);
+  console.log(`Api rodando em http://localhost:${PORT}`);
 });
