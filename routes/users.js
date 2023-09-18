@@ -39,36 +39,36 @@ router.get('/register', notAuthenticated, recaptcha.middleware.render, (req, res
 });
 
 router.post('/register', recaptcha.middleware.verify, captchaRegister, async (req, res) => {
-    try {
-        let {username, password, confirmPassword } = req.body;
-        if (password.length < 6 || confirmPassword < 6) {
-            req.flash('error_msg', 'Password must be at least 6 characters');
-            return res.redirect('/users/register');
-        }
-        if (password === confirmPassword) {
-            let checking = await checkUsername(username);
-            if(checking) {
-                req.flash('error_msg', 'A user with the same Username already exists');
-                return res.redirect('/users/register');
-            } else {
-                let hashedPassword = getHashedPassword(password);
-                let apikey = randomText(8);
-                addUser(username, hashedPassword, apikey);
-                req.flash('success_msg', 'You are now registered and can login');
-                return res.redirect('/users/login');
-            }
-        } else {
-            req.flash('error_msg', 'Password does not match.');
-            return res.redirect('/users/register');
-        }
-    } catch(err) {
-        console.log(err);
-    }
+try {
+let {username, password, confirmPassword } = req.body;
+if (password.length < 6 || confirmPassword < 6) {
+req.flash('error_msg', 'A Senha tem que ter pelomenos 6 characteres');
+return res.redirect('/users/register');
+}
+if (password === confirmPassword) {
+let checking = await checkUsername(username);
+if(checking) {
+req.flash('error_msg', 'O Nome de usuario ja existe');
+return res.redirect('/users/register');
+} else {
+let hashedPassword = getHashedPassword(password);
+let apikey = randomText(8);
+addUser(username, hashedPassword, apikey);
+req.flash('success_msg', 'Registrado com Sucesso agora faça login!');
+return res.redirect('/users/login');
+}
+} else {
+req.flash('error_msg', 'As Senhas não estão inguais.');
+return res.redirect('/users/register');
+}  
+} catch(err) {
+console.log(err);
+}
 })
 
 router.get('/logout', (req,res) => {
     req.logout();
-    req.flash('success_msg', 'logout success');
+    req.flash('success_msg', 'Logado com success');
     res.redirect('/users/login');
 });
 
