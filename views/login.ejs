@@ -1,52 +1,45 @@
-<section class="py-5"></section>
-<section class="py-4 bg-dark">
-<div class="container">
-<center>
+<div id="wrapper">
+<div class="vertical-align-wrap">
+<div class="vertical-align-middle auth-main">
+<div class="auth-box">
+<div class="card">
+<div class="header">
+<center
+
+<h5 class="lead">[ ENTRAR NA SUA CONTA ]</h5>
+</center>
+</div>
 
 <%- include('layouts/msg')  %> 
 <%- include('layouts/errors')  %> 
-<br>
-<br>
-<div class="col-md-5">
-<div class="card">
-<div class="card-body">
 
-<p class="card-title text-center text-primary" style="font-size: 20px;">[ ENTRAR NA SUA CONTA ]</p>
-<p class="text-muted small-xl text-center">LOGIN</p>
-
-<form method="POST" action="/users/login">
-<!-- <form id="forms"> -->
+<div class="body">
+<form class="form-auth-small" method="POST" action="/users/login">
 
 <div class="form-group">
-<input style="font-family:Arial, FontAwesome" name="username" type="text" class="form-control" placeholder="&#xf007;   Username" required>
+<label for="signin-email" class="control-label sr-only">Email</label>
+<input type="text" class="form-control" id="login" placeholder="[ User ]">
 </div>
 
 <div class="form-group">
-<input style="font-family:Arial, FontAwesome" name="password" type="password" class="form-control" placeholder="&#xf13e;   Password" required>
-</div>
-
-<div class="form-group text-center" style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;">
-
+<label for="signin-password" class="control-label sr-only">Password</label>
+<input type="password" class="form-control" id="senha" placeholder="[ Senha ]">
 </div>
 
 <div>
 <%- recaptcha %>
 </div>
 
-<div class="text-center">
-<button type="submit" class="btn btn-primary mb-2"><i class="fas fa-sign-in-alt"></i><em class="ml-2"></em>Entrar</button>
-</div>
+<button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
 
 </form>
 
-<div class="text-center">
-<p></p>
-<p>Não tem uma conta?</p>
-<a class="btn btn-primary mb-2" href="/users/register"><i class="fas fa-clipboard-list"></i><em class="ml-2"></em>Registrar</a>
+<div class="bottom">
+<span>Não tem uma Conta? <a href="/users/register">Registrar</a></span>
 </div>
-                    </div>
-                </div>
-            </div>
-        </center>
-    </div>
-</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
