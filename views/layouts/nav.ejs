@@ -1,52 +1,22 @@
-<section class="smart-scroll">
+<nav class="navbar navbar-fixed-top">
 <div class="container-fluid">
-<nav class="navbar navbar-expand-md navbar-dark">
-<a class="navbar-brand heading-black" href="/">JG-BOTS API'S</a>
-<button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-<span data-feather="grid"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarCollapse">
-<ul class="navbar-nav ml-auto">
+<div class="navbar-btn">
+<button type="button" class="btn-toggle-offcanvas"> <span class="iconify" data-icon="dashicons:menu" style="color: limegreen;" data-width="25" data-height="25"></span></button>
+</div>
 
-<li class="nav-item"><a class="nav-link page-scroll d-flex flex-row align-items-center" href="/price">
-<em class="mr-2"></em>
-Valores
-</a>
+<div class="navbar-brand">
+</div>
 
-<li class="nav-item"><a class="nav-link page-scroll d-flex flex-row align-items-center" href="/premium">
-<em class="mr-2"></em>
-Premium
-</a>
-
-<% if (user) { %>
-
-<li class="nav-item"><a class="nav-link page-scroll d-flex flex-row align-items-center" href="/users/logout">
-<em class="mr-2"></em>
-Sair
-</a>
+<div class="navbar-right">
+<div id="navbar-menu">
+<ul class="nav navbar-nav">
+<li>
+<li>
+<a href="/" class="icon-menu"><i class="fa fa-sign-out"></i></a>
+<!--- Botão de Sair -->
 </li>
-
-<% } else { %>
-
-<li class="nav-item"><a class="nav-link page-scroll d-flex flex-row align-items-center" href="/users/register">
-<em class="mr-2"></em>
-Registrar
-</a>
-
-<li class="nav-item"><a class="nav-link page-scroll d-flex flex-row align-items-center" href="/users/login">
-<em class="mr-2"></em>
-Entrar
-</a>
-
-<% } %>
-
-<li class="nav-item"><a class="nav-link page-scroll d-flex flex-row align-items-center" href="/docs">
-<em class="mr-2"></em>
-Documentos
-</a>
-
 </ul>
 </div>
-</nav>
 </div>
-</section>
+</div>
+</nav>
