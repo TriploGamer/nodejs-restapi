@@ -1,100 +1,187 @@
-<section id="about">
-	<p> </p>
-	<div class="row about-how">
-		<h1 class="intro-header">Zekais-Api</h1>
-		<h4 style="text-align: center;">Hello <%= username %>, Your Apikey : <%= apikey %></h4>
-	</div>
-	<div class="row justify-content-center">
-		<h4 data-aos="fade-up">Docs Page</h4>
-		<div class="col-twelve"  style="font-size: 16px;">
-			<div class="plan-block" data-aos="fade-up">
-				<div style="overflow-x:auto !important;">
-					<table class="table mb-0" style="width: 100% !important;">
-						<thead class="text-primary">
-							<tr>
-								<th scope="col">API NAME</th>
-								<th scope="col">PARAMETER</th>
-								<th scope="col">INFORMATION</th>
-								<th scope="col">ACTION</th>
-							</tr>
-						</thead>
-						<tbody style="text-align: center !important;">
-							<tr>
-								<td>Youtube Mp3</td>
-								<td>url & apikey</td>
-								<td>Youtube Audio Downloader</td>
-								<td>
-									<a target="__blank" href="/api/ytmp3?url=https://www.youtube.com/watch?v=9JS47BC0WXc&apikey=<%= apikey %>" class="button button-primary cta">Try</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Youtube Mp4</td>
-								<td>url & apikey</td>
-								<td>Youtube Video Downloader</td>
-								<td>
-									<a target="__blank" href="/api/ytmp4?url=https://www.youtube.com/watch?v=9JS47BC0WXc&apikey=<%= apikey %>" class="button button-primary cta">Try</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Youtube Play</td>
-								<td>query & apikey</td>
-								<td>Youtube Audio Downloader</td>
-								<td>
-									<a target="__blank" href="/api/ytplay?query=alone&apikey=<%= apikey %>" class="button button-primary cta">Try</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Cak Lontong</td>
-								<td>apikey</td>
-								<td>Cak Lontong</td>
-								<td>
-									<a class="button button-primary" target="__blank" href="/api/caklontong?apikey=<%= apikey %>">Try</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Quotes</td>
-								<td>apikey</td>
-								<td>Random Quotes</td>
-								<td>
-									<a class="button button-primary" target="__blank" href="/api/quotes?apikey=<%= apikey %>">Try</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Bijak</td>
-								<td>apikey</td>
-								<td>Random Bijak</td>
-								<td>
-									<a class="button button-primary" target="__blank" href="/api/bijak?apikey=<%= apikey %>">Try</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Fakta</td>
-								<td>apikey</td>
-								<td>Random Fakta</td>
-								<td>
-									<a class="button button-primary" target="__blank" href="/api/fakta?apikey=<%= apikey %>">Try</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Motivasi</td>
-								<td>apikey</td>
-								<td>Random Motivasi</td>
-								<td>
-									<a class="button button-primary" target="__blank" href="/api/motivasi?apikey=<%= apikey %>">Try</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Penyegar Timeline</td>
-								<td>apikey</td>
-								<td>Random Penyegar Timeline</td>
-								<td>
-									<a class="button button-primary" target="__blank" href="/api/ptl?apikey=<%= apikey %>">Try</a>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div> 
-	</div> 
-</section> 
+<section class="py-7 py-md-0" id="home">
+
+<div class="content">
+<div class="col-lg-6 col-md-12">
+<div class="card ">
+<div class="card overflow-hidden dash1-card border-0">
+<div class="card-body">
+<img class="card-img" src="https://telegra.ph/file/ff1e809ddb89101c73838.jpg"></img><div class="d-flex align-items-end justify-content-between">
+<div>
+<h4 class="mb-1" style="color: red;"><\ BEMVINDO(a) \></h4>
+<h6 class="mb-1 number-font">
+<div>
+Usuario:「 <%= username %> 」<br>
+Apikey:「 <%= apikey %> 」<br>
+Requests:「 <%= limit %> 」
+
+</div>
+</h6>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="content">
+<div class="col-lg-6 col-md-12">
+<div class="card ">
+<div class="card overflow-hidden dash1-card border-0">
+<div class="card-body">
+<div class="d-flex align-items-end justify-content-between">
+<div>
+<p class=" mb-1 ">ENDEREÇO IP ↯</p>
+<h2 class="mb-1 number-font">
+<div id="ip">
+<html>
+<body>
+<script type="text/javascript">
+var userip;
+</script>
+<script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
+<h3 class="mb-0" ><script type="text/javascript">
+document.write(userip);
+</script></h3>
+</body>
+</html>
+</div>
+</h2>
+<small class="fs-12 text-muted">Seu IP</small>
+</div>
+<span class="text-info fs-35 dash1-iocns bg-info-transparent border-info"><i class="fa fa-wifi" aria-hidden="true"></i></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<form action="/api/cekapikey">
+<div class="content">
+<div class="col-lg-6 col-md-12">
+<div class="card ">
+<div class="card-header">
+<h4 class="card-title"><i class="tim-icons icon-key-25" aria-hidden="true"></i> CHECAR SE A KEY É VÁLIDA</h4>
+</div>
+<div class="card-body text-sm-left font-weight-bold">
+<input class="form-control font-weight-bold text-center" type="text" placeholder="DIGITE A KEY" name="apikey" required>
+<small id="textHelp" class="font">
+não tem apikey? compre uma agora!
+<a href="https://wa.me/6285852203076">
+Whatsapp
+</a>
+</small>
+</br>
+</br>
+<button type="submit" class="btn btn-primary content-justify-center"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> <span class="font-weight-bold">CHECAR</span></button>
+</div>
+</div>
+</div>
+</div>
+</form>
+
+<div class="content">
+  <div class="col-lg-6 col-md-12">
+    <div class="card ">
+      <div class="card-header">
+        <h4 class="card-title">APIS ABAIXO!</h4>
+        </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table tablesorter " id="">
+<thead class="text-primary">
+    <tr>
+    <th>Api</th>
+    <th class="text-center">Require</th>
+    <th class="text-center">Informação</th>
+    <th class="text-center">GetJson</th>
+    </tr>
+</thead>
+
+<!--
+=========================================================
+* * Itens aqui
+=========================================================
+-->
+
+<tbody style="text-align: center !important;">
+
+<tr>
+<td>Youtube Mp3</td>
+<td>query & apikey</td>
+<td>✔️</td>
+<td>
+<div class="text-center"><a class="btn btn-primary" href="/api/youtube/playmp3?query=A Prova de balas&apikey=<%= apikey %>" target="_blank">TRY</a></div>
+</td>
+</tr>
+
+<tr>
+<td>Youtube Mp4</td>
+<td>query & apikey</td>
+<td>✔️</td>
+<td>
+<div class="text-center"><a class="btn btn-primary" href="/api/youtube/playmp4?query=A Prova de balas&apikey=<%= apikey %>" target="_blank">TRY</a></div>
+</td>
+</tr>
+
+<tr>
+<td>Ytmp3</td>
+<td>url & apikey</td>
+<td>✔️</td>
+<td>
+<div class="text-center"><a class="btn btn-primary" href="/api/youtube/youtube/mp3?link=https://youtu.be/B_ZpA0cAhCg&apikey=<%= apikey %>" target="_blank">TRY</a></div>
+</td>
+</tr>
+
+<tr>
+<td>Ytmp4</td>
+<td>url & apikey</td>
+<td>✔️</td>
+<td>
+<div class="text-center"><a class="btn btn-primary" href="/api/youtube/youtube/mp4?link=https://youtu.be/B_ZpA0cAhCg&apikey=<%= apikey %>" target="_blank">TRY</a></div>
+</td>
+</tr>
+
+<tr>
+<td>Youtube Search</td>
+<td>query & apikey</td>
+<td>✔️</td>
+<td>
+<div class="text-center"><a class="btn btn-primary" href="/api/youtube/pesquisar?query=A Prova de balas&apikey=<%= apikey %>" target="_blank">TRY</a></div>
+</td>
+</tr>
+
+<tr>
+<td>Tiktok</td>
+<td>url & apikey</td>
+<td>✔️</td>
+<td>
+<div class="text-center"><a class="btn btn-primary" href="/api/download/tiktok'?link=https://vm.tiktok.com/ZMFU4jsPb/&apikey=<%= apikey %>" target="_blank">TRY</a></div>
+</td>
+</tr>
+
+<tr>
+<td>Gerar-nick</td>
+<td>query & apikey</td>
+<td>✔️</td>
+<td>
+<div class="text-center"><a class="btn btn-primary" href="/api/tools/gerarnick?query=JG-Bots&apikey=<%= apikey %>" target="_blank">TRY</a></div>
+</td>
+</tr>
+
+</tbody>
+
+<!--
+=========================================================
+* * Termino
+=========================================================
+-->
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>

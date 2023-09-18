@@ -1,34 +1,48 @@
-<section id="pricing">
-    <div class="row pricing-content">
-        <center>
-            <%- include('layouts/msg')  %> 
-            <%- include('layouts/errors')  %> 
-        </center>
-    </div>
-    <div class="row pricing-content">
-        <center>
-            <h2>REGISTER FORM</h2>
-            <form method="POST" action="/users/register">
-                <div>
-                    <input style="font-family:Arial, FontAwesome" name="username" type="text" class="form-control" placeholder="&#xf007;   Username" required>
+<section class="py-5"></section>
+<section class="py-4 bg-dark">
+<div class="container">
+<center>
+
+<%- include('layouts/msg')  %> 
+<%- include('layouts/errors')  %> 
+<br>
+<br>
+<div class="col-md-5">
+<div class="card">
+<div class="card-body">
+
+<p class="card-title text-center text-primary" style="font-size: 20px;">[ REGISTRAR SUA CONTA ]</p>
+<p class="text-muted small-xl text-center">REGISTRAR</p>
+
+<form method="POST" action="/users/register">
+<div class="form-group">
+<input style="font-family:Arial, FontAwesome" name="username" type="text" class="form-control" placeholder="&#xf007;   Username" required>
+</div>
+                            <div class="form-group">
+                                <input style="font-family:Arial, FontAwesome" name="password" type="password" class="form-control" placeholder="&#xf13e;   Password" required>
+                            </div>
+                            <div class="form-group">
+                                <input style="font-family:Arial, FontAwesome" name="confirmpassword" type="password" class="form-control" placeholder="&#xf13e;   Re-enter Password" required>
+                            </div>
+                            <div class="form-group text-center" style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;">
+
+<div>
+<%- recaptcha %>
+</div>
+
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary mb-2"><i class="fas fa-clipboard-list"></i><em class="ml-2"></em>Registrar</button>
+                            </div>
+                        </form>
+                        <div class="text-center">
+                            <p></p>
+                            <p>Ja tem uma conta?</p>
+                            <a class="btn btn-primary mb-2" href="/users/login"><i class="fas fa-sign-in-alt"></i><em class="ml-2"></em>Entrar</a>      
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <input style="font-family:Arial, FontAwesome" name="password" type="password" class="form-control" placeholder="&#xf13e;   Password" required>
-                </div>
-                <div>
-                    <input style="font-family:Arial, FontAwesome" name="confirmPassword" type="password" class="form-control" placeholder="&#xf13e;   Confirm Password" required>
-                </div>
-                <div>
-                    <%- recaptcha %>
-                </div>
-                <p></p>
-                <button type="submit" class="button button-primary">Register</button>
-            </form>	
-            <div>
-                <p> </p>
-                <p>Already have an account?</p>
-                <a class="button button-primary" href="/users/login">Login</a>
             </div>
-        </center>      
+        </center>
     </div>
 </section>
