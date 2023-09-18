@@ -34,7 +34,7 @@ if (!check) return res.status(403).send({
 res.send({
   status: 200,
   apikey: apikey,
-  status-da-apikey: 'Ativada!'
+  modo: 'Ativada!'
 });
 });
 
